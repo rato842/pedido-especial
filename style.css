@@ -1,0 +1,123 @@
+/* Configuração Geral */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Ajustado para as fotos ficarem em coluna */
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 450px;
+    width: 90%;
+    padding: 40px 20px;
+    background-color: #262626;
+    margin: 20px auto; /* Centraliza a caixa na tela */
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #d4af37;
+}
+
+/* Títulos */
+.titulo-principal {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #d4af37;
+    margin-top: 0;
+}
+
+.subtitulo {
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #c0c0c0;
+    margin-bottom: 30px; 
+}
+
+/* Moldura das Fotos - Formato que não corta o rosto */
+.moldura-foto {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 320px;
+    height: auto; /* Deixa a altura crescer conforme a foto */
+    border-radius: 15px;
+    border: 3px solid #d4af37;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(212, 175, 55, 0.3);
+    background-color: #000;
+}
+
+.foto-ajustada {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Mostra a foto inteira sem cortes */
+}
+
+/* Textos */
+p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin: 15px 0;
+}
+
+.texto-curiosidade {
+    margin-top: 40px;
+    font-style: italic;
+    color: #d4af37;
+}
+
+/* Botão de Revelar */
+#btn-revelar {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.4);    
+}
+
+#btn-revelar:hover {
+    transform: scale(1.05);
+    background-color: #f1c40f;
+}
+
+/* Mensagem de Pedido (Escondida) */
+.hidden {
+    display: none;
+}
+
+#mensagem-pedido {
+    margin-top: 40px;
+    animation: surgindo 1.5s ease-out;
+}
+
+.pergunta-final {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.comando-mesa {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes surgindo {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
